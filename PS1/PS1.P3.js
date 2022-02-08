@@ -51,18 +51,14 @@ console.log(expr1);
  * of a -> A, number of As, and overall length of modified string.
  */
 const expr2 = strDecFunction(superStr, capitalize => {
-    let modified = superStr.replace(/a/g, 'A'); // not 'a', /a/g is global rather than first
-    let replaced = modified.split('A').length - 1 // minus 1 bc the first element of arr is before 'A'
-    let lengthSt = superStr.length;
 
-    const result = {
+    return {
         'originalString': superStr,
-        'modifiedString': modified,
-        'numberReplaced': replaced,
-        'length': lengthSt,
-    }
+        'modifiedString': superStr.replace(/a/g, 'A'),
+        'numberReplaced': superStr.replace(/a/g, 'A').split('A').length - 1,
+        'length': superStr.length,
+    };
 
-    return result;
 });
 
 console.log(expr2);
