@@ -9,9 +9,7 @@
  */
 
 const revSortString = str => {
-    let sorted = str.split(''); // array of chars
-    sorted.sort(); // array is mutable so sort changes array
-    return sorted.reverse(); // same thing here
+    return str.split('').sort().reverse().join();
 }
 
 console.log(revSortString('supercalifragilisticexpialidocious'));

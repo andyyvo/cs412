@@ -41,7 +41,7 @@ const strDecFunction = (str, decor) => decor(str);
  */
 const expr1 = strDecFunction(superStr, splitter => {
     // source on keeping delimiter for regex: https://medium.com/@shemar.gordon32/how-to-split-and-keep-the-delimiter-s-d433fb697c65
-    return superStr.split(/(?=['c'])/g);
+    return superStr.split(/(?=[c])/g);
 });
 
 console.log(expr1);
