@@ -9,6 +9,9 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
+// importing ps3 route
+const ps3Router = require('./routes/ps3');
+
 const app = express();
 
 // view engine setup
@@ -23,6 +26,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+/* 1. mounting route for /ps3 even though this is PS2 lol */
+app.use('/ps3', ps3Router); // part a
+app.use('/ps3/ps3-get', ps3Router); // part b
+app.use('/ps3/ps3-post', ps3Router); // part c
+app.use('/ps3/applesauce', ps3Router); // part d
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
