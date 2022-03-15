@@ -8,7 +8,7 @@ const router = express.Router();
  */
 
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'PS2' });
+    res.render('index', { title: 'PS3' });
 });
 
 /* 2. GET route with one fixed string JSON obj key/val pair */
