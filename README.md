@@ -7,9 +7,9 @@ Time to start working with external data.
 0. Create a new branch off of main, PS4. Be sure that your .gitignore file has an entry to exclude node_modules/ from being pushed to github. You also should include a .gitignore entry for the directory that contains configuration information, such as API keys and endpoints.
 
 1. Build a Node/Express application. The app must have:
-    1. An instance of express.Router in a separate route file that is mounted on the path /ps4 (i.e. app.use(‘/ps4’...)).
+    1. An instance of express.Router in a separate route file that is mounted on the path /ps4 (i.e. app.use(‘/ps4’...).
     2. A route on a POST method that retrieves data from an external API. For example, you might hit the Weather Channel API to retrieve the current weather conditions. ProgrammableWeb.com is a good spot to find APIs offering data you are interested in. The route must use Promises to manage the async http call. Use the 'request' package as your HTTP client (with the understanding that it is deprecated). Wrap the request in a Promise.
-    3. Asecondroute,similartotheoneinb.thatusesasync/awaitsyntax rather than Promises. You can hit the same API endpoint as b. Use 'node- fetch' for this one.
+    3. A second route, similar to the one in b. that uses async/await syntax rather than Promises. You can hit the same API endpoint as b. Use 'node- fetch' for this one.
     4. A third route, similar to b. and c., that uses a callback to handle the async API call. For this one, use the 'request' package. It's fine to hit the same endpoint.
     5. A back-end rendered template to display the results of your call. This can be EJS, Pug, or any other templating language that you’d like to use. You can use the same Pug template for all of your routes.
     6. An HTML form to send a search string into your route. For example, if you are hitting a weather API, you might have a form that asks for a city. You can use Pug for this page, or EJS, or write straight HTML. Your form will use a POST method to submit.
