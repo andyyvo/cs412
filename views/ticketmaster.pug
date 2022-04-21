@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p What type of event do you want to see and where?
+
+  form(action="/ps4/results-promise", method="post")
+    h2 Promise-based Request
+    p 
+      | Event Type (hint: music):
+      input(type='text', name='event', placeholder='Event')
+    p 
+      | Location (hint: boston):
+      input(type='text', name='location', placeholder='Location')
+    input(type='submit', value='Submit')
+
+  form(action="/ps4/results-async", method="post")
+    h2 Async/Await-based Request
+    p 
+      | Event Type (hint: music):
+      input(type='text', name='event', placeholder='Event')
+    p 
+      | Location (hint: boston):
+      input(type='text', name='location', placeholder='Location')
+    input(type='submit', value='Submit')
+  
+  form(action="/ps4/results-callback", method="post")
+    h2 Callback-based Request
+    p 
+      | Event Type (hint: music):
+      input(type='text', name='event', placeholder='Event')
+    p 
+      | Location (hint: boston):
+      input(type='text', name='location', placeholder='Location')
+    input(type='submit', value='Submit')

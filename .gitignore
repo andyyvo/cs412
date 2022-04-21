@@ -2,3 +2,5 @@ node_modules/
 
 # api keys
 .env
+
+config.js
