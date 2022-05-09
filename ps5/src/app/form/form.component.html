@@ -1,1 +1,23 @@
-<p>form works!</p>
+<style>
+    h1, p, label, input, button {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<div>
+    <h1>Welcome! Put in an event type and location.</h1>
+    <p>Check console log after submitting!</p>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="eventType">Event Type: </label>
+            <input type="text" class="form-control" id="eventType" name="eventType" [(ngModel)]="eventType" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="location">Location: </label>
+            <input type="text" class="form-control" id="location" name="location" [(ngModel)]="location" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
